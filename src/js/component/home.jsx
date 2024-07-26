@@ -1,26 +1,65 @@
 import React from "react";
-
+import { Card } from "./card"
+import { Nav } from "./nav"
 //include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 const Home = () => {
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div>
+			<Nav
+				homePage="Home"
+				myAccount="My Account"
+				settings="Settings"
+			/>
+			<div>
+				<div className="jumbotron">
+					<h1>A Warm Welcome!</h1>
+					<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h2>
+					<button type="button" class="btn btn-primary">Call to Action!</button>
+				</div>
+			</div>
+			<div className="container">
+				<Card
+					imageUrl="..."
+					imageAltText=""
+					cardTitle="Card Title"
+					cardBodyText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+					callToActionText="Find Out More"
+					callToActionUrl="..."
+				/>
+				<Card
+					imageUrl="..."
+					imageAltText=""
+					cardTitle="Card Title"
+					cardBodyText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+					callToActionText="Find Out More"
+					callToActionUrl="..."
+				/>
+				<Card
+					imageUrl="..."
+					imageAltText=""
+					cardTitle="Card Title"
+					cardBodyText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+					callToActionText="Find Out More"
+					callToActionUrl="..."
+				/>
+				<Card
+					imageUrl="..."
+					imageAltText=""
+					cardTitle="Card Title"
+					cardBodyText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+					callToActionText="Find Out More"
+					callToActionUrl="..."
+				/>
+			</div>
+			<div className="footer">
+				<h3>Copyright© Jihee's Website 2024</h3>
+			</div>
 		</div>
-	);
+
+
+	)
 };
 
 export default Home;
